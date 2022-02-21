@@ -1,0 +1,94 @@
+.navbar-dark .navbar-toggler {
+    border-color: transparent;
+}
+
+.bg-dark {
+    background: $domsey-dark !important;
+}
+
+.btn.btn-secondary {
+    background: none;
+    color: black;
+    border: 1px solid $domsey-primary;
+    border-radius: 0;
+}
+
+.btn.btn-secondary:hover {
+    background-color: $domsey-primary;
+    color: white;
+}
+
+.btn.btn-secondary:focus,
+.btn.btn-secondary:active {
+    color: white !important;
+    background-color: $domsey-primary !important;
+    border-color: $domsey-primary !important;
+}
+
+.card {
+    margin-bottom: 0;
+    box-shadow: 5px 5px 20px 5px rgb(0 0 0 / 47%), 0 1px 2px rgb(0 0 0 / 24%);
+    border: 0;
+}
+
+.card > .card-body {
+    border-top: 0;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.table td {
+    vertical-align: middle;
+    border-top: none;
+}
+
+.progress-bar {
+    background-color: $domsey-primary;
+}
+
+.modal-content {
+    border-radius: 0;
+}
+.modal-header {
+    background: $domsey-primary;
+    color: white;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+@media (min-width: 768px) {
+    // Take navbar-nav light colors to navbar dark
+    .navbar-dark .navbar-nav {
+        .nav-link {
+            color: $navbar-light-color;
+
+            &:hover, &:focus {
+                color: $navbar-light-hover-color;
+            }
+        }
+
+        .show > .nav-link,
+        .active > .nav-link,
+        .nav-link.show,
+        .nav-link.active {
+            color: $navbar-light-active-color;
+            border-bottom: 1px solid $domsey-light;
+        }
+    }
+
+    .navbar-dark.fixed-top .navbar-nav {
+        .nav-link {
+            color: $navbar-dark-color;
+
+            &:hover, &:focus {
+                color: $navbar-dark-hover-color;
+            }
+        }
+
+        .show > .nav-link,
+        .active > .nav-link,
+        .nav-link.show,
+        .nav-link.active {
+            color: $navbar-dark-active-color;
+        }
+    }
+}
