@@ -29,6 +29,14 @@
     "@popperjs/core": "^2.11.2",
     "lightbox2": "^2.11.3",
     "parcel": "^2.3.2",
+    "parcel-namer-custom": "^0.2.0",
     "rimraf": "^3.0.2"
+  },
+  "parcel-namer-custom": {
+    ".ejs?$": "[name].[type]",
+    ".js?$": "[folder]/[name].[hash].[type]",
+    ".scss?$": "css/[name].[hash].[type]",
+    ".png?$|.gif?$": "img/[name].[hash].[type]",
+    ".woff2?$|.ttf?$": "fonts/[name].[hash].[type]"
   }
 }

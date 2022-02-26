@@ -5,6 +5,7 @@
 @import 'node_modules/@fortawesome/fontawesome-free/scss/regular';
 @import 'node_modules/@fortawesome/fontawesome-free/scss/solid';
 @import 'node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import '../../node_modules/lightbox2/dist/css/lightbox.min.css';
 @import '_overrides';
 
 /* Header */
@@ -118,7 +119,7 @@ img.circle {
     > .row > div:not(:last-child) {
         margin-bottom: 1em;
     }
-    > .row > div > div {
+    > .row > div:not(:last-child) > div {
         position: absolute;
         top: 0;
         height: 100%;
@@ -128,6 +129,13 @@ img.circle {
         > p {
             margin-bottom: 0;
         }
+    }
+    > .row > div:last-child > div {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $domsey-primary;
+        height: 100%;
     }
 }
 
@@ -149,7 +157,7 @@ img.circle {
         margin-bottom: unset;
     }
     .domsey-portfolio > .row {
-        > div > div {
+        > div:not(:last-child) > div {
             display: none;
         }
         > div:hover > div {

@@ -8,11 +8,11 @@
 			{ "name": "PHP", "icon": "fa-brands fa-php", "skillLevel": "25" },
 			{ "name": "Java", "icon": "fa-brands fa-java", "skillLevel": "50" },
 			{ "name": "Bash", "icon": "fa fa-terminal", "skillLevel": "50" },
+			{ "name": "Dart", "icon": "fa fa-code", "skillLevel": "25" },
 			{ "name": "MySQL", "icon": "fa fa-database", "skillLevel": "100" },
 			{ "name": "Microsoft SQL", "icon": "fa fa-database", "skillLevel": "75" },
 			{ "name": "Oracle SQL", "icon": "fa fa-database", "skillLevel": "75" },
-			{ "name": "PostgreSQL", "icon": "fa fa-database", "skillLevel": "75" },
-			{ "name": "Dart", "icon": "fa fa-code", "skillLevel": "100" }
+			{ "name": "PostgreSQL", "icon": "fa fa-database", "skillLevel": "75" }
 		],
 		"frameworks": [
 			{ "name": "Angular", "icon": "fa-brands fa-angular", "skillLevel": "75" },
@@ -26,9 +26,10 @@
 		"tools": [
 			{ "name": "Git", "icon": "fa-brands fa-git-alt", "skillLevel": "100" },
 			{ "name": "Maven", "icon": "fa-brands fa-java", "skillLevel": "50" },
-			{ "name": "YouTrack", "icon": "fa fa-list-check", "skillLevel": "25" },
 			{ "name": "Jira", "icon": "fa-brands fa-jira", "skillLevel": "75" },
-			{ "name": "Confluence", "icon": "fa-brands fa-confluence", "skillLevel": "75" }
+			{ "name": "Confluence", "icon": "fa-brands fa-confluence", "skillLevel": "75" },
+			{ "name": "Jenkins", "icon": "fa-brands fa-jenkins", "skillLevel": "75" },
+			{ "name": "YouTrack", "icon": "fa fa-list-check", "skillLevel": "25" }
 		]
 	},
 	"views": ["src/views"]
