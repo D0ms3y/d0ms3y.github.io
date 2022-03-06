@@ -29,13 +29,11 @@ jobs:
     
     - run: npm run build
     
-    - name: Copy dist
     - run: cp -r dist ../dist
     
-    - name: Checkout gh-pages
-      run: git checkout gh-pages
-      
-    - name: Replace current version with latest
+    - run: git checkout gh-pages
+    
+    - name: Copy dist back
       run: rm -rf . && cp -r ../dist/. .
       
     - name: publish page
