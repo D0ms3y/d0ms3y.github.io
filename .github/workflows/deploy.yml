@@ -38,4 +38,4 @@ jobs:
         repository: ${{ github.repository }}
         branch: gh-pages
         force: true
-        directory: ./dist
+        directory: dist
