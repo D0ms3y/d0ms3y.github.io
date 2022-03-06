@@ -36,11 +36,14 @@ jobs:
       run: git push -d origin gh-pages && git branch gh-pages && git checkout gh-pages
     
     - name: Copy dist back
-      run: rm -rf * && cp -r ../dist/. .
+      run: rm -rf * && cp -r ../dist/. . && rm -rf .github .ejsrc .gitignore .parcelrc
+
+    - run: ls
       
     - name: Deploy latest version of page into branch gh-pages
       run: |
         git config --global user.name 'Github Action'
         git config --global user.email 'actions@github.com'
+        git add .
         git commit -am "deploy latest version"
         git push -u origin gh-pages
