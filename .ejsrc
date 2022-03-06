@@ -18,10 +18,10 @@
 			{ "name": "Angular", "icon": "fa-brands fa-angular", "skillLevel": "75" },
 			{ "name": "Bootstrap", "icon": "fa-brands fa-bootstrap", "skillLevel": "100" },
 			{ "name": "Express", "icon": "fa-brands fa-node-js", "skillLevel": "100" },
-			{ "name": "typeORM", "icon": "fa fa-database", "skillLevel": "100" },
-			{ "name": "Symfony", "icon": "fa-brands fa-symfony", "skillLevel": "100" },
+			{ "name": "typeORM", "icon": "fa fa-database", "skillLevel": "75" },
+			{ "name": "Symfony", "icon": "fa-brands fa-symfony", "skillLevel": "50" },
 			{ "name": "jQuery", "icon": "fa-brands fa-js", "skillLevel": "100" },
-			{ "name": "Flutter", "icon": "fa fa-code", "skillLevel": "100" }
+			{ "name": "Flutter", "icon": "fa fa-code", "skillLevel": "25" }
 		],
 		"tools": [
 			{ "name": "Git", "icon": "fa-brands fa-git-alt", "skillLevel": "100" },
