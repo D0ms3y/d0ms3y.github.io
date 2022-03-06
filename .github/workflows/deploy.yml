@@ -36,6 +36,8 @@ jobs:
     - name: Copy dist back
       run: rm -rf * && cp -r ../dist/. .
       
+    - run: ls
+
     - name: Deploy latest version of page into branch gh-pages
       uses: ad-m/github-push-action@v0.6.0
       with:
