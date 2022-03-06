@@ -31,18 +31,18 @@ jobs:
     - run: cp -r dist ../dist
     
     - name: Delete gh-pages repository
-      run: git push -d origin gh-pages
+      run: git push -d origin gh-pages && git branch gh-pages && git checkout gh-pages
     
     - name: Copy dist back
       run: rm -rf * && cp -r ../dist/. .
       
-    - run: ls
-
     - name: Deploy latest version of page into branch gh-pages
-      uses: ad-m/github-push-action@v0.6.0
+      uses: actions/checkout@v2
+      run: |
+        git config --global user.name 'Github Action'
+        git config --global user.email 'actions@github.com'
+        git commit -am "deploy latest version"
+        git push -u origin gh-pages
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         repository: ${{ github.repository }}
-        branch: gh-pages
-        force: true
-        directory: .
