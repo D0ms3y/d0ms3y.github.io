@@ -29,8 +29,15 @@ jobs:
     
     - run: npm run build
     
+    - name: Copy dist
     - run: cp -r dist ../dist
     
+    - name: Checkout gh-pages
+      run: git checkout gh-pages
+      
+    - name: Replace current version with latest
+      run: rm -rf . && cp -r ../dist/. .
+      
     - name: publish page
       uses: ad-m/github-push-action@v0.6.0
       with:
@@ -38,4 +45,4 @@ jobs:
         repository: ${{ github.repository }}
         branch: gh-pages
         force: true
-        directory: ../dist
+        directory: .
