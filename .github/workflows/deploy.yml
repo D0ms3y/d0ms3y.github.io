@@ -30,14 +30,13 @@ jobs:
     
     - run: cp -r dist ../dist
     
-    - run: git branch
-
-    - run: git checkout gh-pages
+    - name: Delete gh-pages repository
+      run: git push -d origin gh-pages
     
     - name: Copy dist back
       run: rm -rf . && cp -r ../dist/. .
       
-    - name: publish page
+    - name: Deploy latest version of page into branch gh-pages
       uses: ad-m/github-push-action@v0.6.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
