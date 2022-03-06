@@ -30,6 +30,8 @@ jobs:
     
     - run: cp -r dist ../dist
     
+    - run: git branch
+
     - run: git checkout gh-pages
     
     - name: Copy dist back
