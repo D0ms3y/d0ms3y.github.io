@@ -36,7 +36,7 @@ jobs:
       run: git push -d origin gh-pages && git branch gh-pages && git checkout gh-pages
     
     - name: Copy dist back
-      run: rm -rf * && cp -r ../dist/. . && rm -rf .github .ejsrc .gitignore .parcelrc
+      run: rm -rf * && cp -r ../dist/. . && rm -rf .github .ejsrc .gitignore .parcelrc .vscode .parcel-cache
 
     - run: ls
       
