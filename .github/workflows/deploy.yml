@@ -29,7 +29,7 @@ jobs:
     
     - run: npm run build
     
-    - run: ls
+    - run: cp dist ../dist
     
     - name: publish page
       uses: ad-m/github-push-action@v0.6.0
@@ -38,4 +38,4 @@ jobs:
         repository: ${{ github.repository }}
         branch: gh-pages
         force: true
-        directory: dist
+        directory: ../dist
