@@ -33,7 +33,7 @@ jobs:
       uses: ad-m/github-push-action@v0.6.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        repository: ${{ GITHUB_REPOSITORY }}
+        repository: ${{ github.event.repository.name }}
         branch: gh-pages
         force: true
         directory: ./dist
