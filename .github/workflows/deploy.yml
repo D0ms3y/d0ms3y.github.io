@@ -29,6 +29,8 @@ jobs:
     
     - run: npm run build
     
+    - run: ls
+    
     - name: publish page
       uses: ad-m/github-push-action@v0.6.0
       with:
