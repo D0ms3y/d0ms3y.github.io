@@ -1,0 +1,183 @@
+@import '_variables';
+@import '_colors';
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import '../../node_modules/lightbox2/dist/css/lightbox.min.css';
+@import '_overrides';
+
+/* Header */
+
+/* Content */
+img.circle {
+    display: block;
+    margin: 0 auto;
+    border-radius: 200%;
+    width: 70%;
+}
+
+#aboutme > div > .row, #aboutme > div > .row > div:first-child,
+#skills > div > .row,
+#portfolio > div > .row,
+#career {
+    min-height: calc(100vh - 55.97px);
+}
+
+.fixed-top + #aboutme {
+    padding-top: 55.97px;
+}
+
+#aboutme {
+    margin-top: 0;
+    background: $domsey-primary;
+    p {
+        margin-bottom: 0;
+    }
+    hr {
+        background-color: white;
+    }
+    > div > .row, > div > .row > div:first-child {
+        min-height: calc(100vh - 56px);
+    }
+    > div > .row > div:first-child {
+        display: flex;
+    }
+    ul.list-inline a {
+        color: white;
+    }
+}
+#career {
+    background: #efefef;
+    display: flex;
+    > div > div > div {
+        position: relative;
+    }
+}
+
+#skills {
+    background: $domsey-dark;
+}
+
+.domsey-timeline {
+    list-style: none;
+    margin-bottom: 0;
+    > li > .year {
+        display: block;
+        position: absolute;
+        left: .5em;
+        width: 50px;
+        line-height: 50px;
+        border-radius: 50%;
+        background: #1a237e;
+        color: white;
+        text-align: center;
+    }
+    > li > .card {
+        margin-left: 2em;
+        margin-bottom: 1em;
+        box-shadow: unset;
+        .card-header {
+            border: none;
+            background: $domsey-primary;
+            color: white;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 10px;
+                right: 100%;
+                width: 0;
+                border-right: 10px solid #1a237e;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+            }
+        }
+    }
+    > li:last-child > .card {
+        margin-bottom: 0;
+    }
+}
+
+.domsey-skills {
+    .card {
+        padding-left: 15px;
+        padding-right: 15px;
+        > .row > div:first-child > h3 {
+            margin-top: 1rem;
+        }
+    }
+}
+
+.domsey-portfolio {
+    img {
+        width: 100%;
+    }
+    > .row > div {
+        position: relative;
+    }
+    > .row > div:not(:last-child) {
+        margin-bottom: 1em;
+    }
+    > .row > div:not(:last-child) > div {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: calc(100% - 24px);
+        padding: 1em;
+        background: rgba(0, 0, 0, 0.24);
+        > p {
+            margin-bottom: 0;
+        }
+    }
+    > .row > div:last-child > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $domsey-primary;
+        aspect-ratio: 1 / 1;
+        height: 100%;
+    }
+}
+
+#portfolio {
+    background: #efefef;
+}
+
+#imprint iframe {
+    width: 100%;
+    height: 50em;
+}
+
+/* Footer */
+/* Media Queries */
+@media (min-width: 768px) {
+    img.circle {
+        width: 90%;
+    }
+    #aboutme, nav.navbar {
+        background: linear-gradient(to right, $domsey-primary 50%, #efefef 50%)!important;
+    }
+    nav.navbar.fixed-top {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        background: $domsey-primary!important;
+        color: white;
+    }
+    .domsey-portfolio > .row > div:not(:last-child) {
+        margin-bottom: unset;
+    }
+    .domsey-portfolio > .row {
+        > div:not(:last-child) > div {
+            display: none;
+        }
+        > div:last-child:hover > div {
+            display: flex;
+        }
+        > div:hover > div {
+            display: block;
+        }
+    }
+    .domsey-skills .card > .row > div > h3 {
+        margin-top: 15px;
+    }
+}

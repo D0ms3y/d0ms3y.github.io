@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="col-12">
+        <h2 class ="text-center text-white mb-4">Skills</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <h3 class="card-title text-center">Languages</h3>
+                    <table class="table">
+                        <% locals.languages.forEach(function(language) { %>
+                            <tr>
+                                <td><i class="<%= language.icon %>"></i></td>
+                                <td><%= language.name %></td>
+                                <td class="w-50">
+                                    <div class="progress">
+                                        <div class="progress-bar w-<%= language.skillLevel %>" role="progressbar" aria-valuenow="0"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        <% }); %>
+                    </table>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h3 class="card-title text-center">Frameworks</h3>
+                    <table class="table">
+                        <% locals.frameworks.forEach(function(framework) { %>
+                            <tr>
+                                <td><i class="<%= framework.icon %>"></i></td>
+                                <td><%= framework.name %></td>
+                                <td class="w-50">
+                                    <div class="progress">
+                                        <div class="progress-bar w-<%= framework.skillLevel %>" role="progressbar" aria-valuenow="0"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        <% }); %>
+                    </table>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h3 class="card-title text-center">Tools</h3>
+                    <table class="table">
+                        <% locals.tools.forEach(function(tool) { %>
+                            <tr>
+                                <td><i class="<%= tool.icon %>"></i></td>
+                                <td><%= tool.name %></td>
+                                <td class="w-50">
+                                    <div class="progress">
+                                        <div class="progress-bar w-<%= tool.skillLevel %>" role="progressbar" aria-valuenow="0"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        <% }); %>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

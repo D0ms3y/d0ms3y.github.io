@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../scss/styles.scss">
+        <title>Dominik Borowski | ドミニク - Portfolio</title>
+    </head>
+    <body data-bs-spy="scroll" data-bs-target="#domsey-nav" data-bs-offset="58"> <!-- data-spy="scroll" data-target="#domsey-nav" data-offset="56" -->
+        <%- include('header') %>
+        <div id="aboutme">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-0">
+                        <%- include('aboutme') %>
+                    </div>
+                    <div id="career" class="col-12 col-md-6 pt-5 pb-5 pt-lg-0 pb-lg-0">
+                        <%- include('career') %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="skills" class="h-25">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-12 offset-md-0 pt-5 pb-5 mt-auto mb-auto domsey-skills">
+                        <%- include ('skills') %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="portfolio">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-12 offset-md-0 pt-5 pb-5 mt-auto mb-auto domsey-portfolio">
+                        <%- include('portfolio') %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark">
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-center mb-0 text-white p-2">Dominik Borowski 2023 | <a class="text-white" href="#" data-bs-toggle="modal" data-bs-target="#imprint">Imprint</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Modals hier einfügen -->
+        <%- include('projects/gallery') %>
+        <%- include('projects/rem-discord-bot') %>
+        <%- include('imprint') %>
+        <script type="module" src="../js/app.js"></script>
+    </body>
+</html>
