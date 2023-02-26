@@ -75,15 +75,13 @@
         }
     }
 
-    .navbar-dark.fixed-top .navbar-nav {
+    .navbar-dark.fixed-bg .navbar-nav {
         .nav-link {
             color: $navbar-dark-color;
-
             &:hover, &:focus {
                 color: $navbar-dark-hover-color;
             }
         }
-
         .show > .nav-link,
         .active > .nav-link,
         .nav-link.show,

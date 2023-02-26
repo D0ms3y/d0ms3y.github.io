@@ -22,17 +22,17 @@ $(() => {
     // fix header to top when scrolling
     const header = $("nav.navbar");
     if($(document).scrollTop() >= (header.height() / 2)) {
-        header.addClass('fixed-top');
+        header.addClass('fixed-bg');
     } else {
-        header.removeClass('fixed-top')
+        header.removeClass('fixed-bg')
     }
 
     $(document).on('scroll', (e) => {
         const header = $("nav.navbar");
         if($(e.currentTarget).scrollTop() >= (header.height() / 2)) {
-            header.addClass('fixed-top');
+            header.addClass('fixed-bg');
         } else {
-            header.removeClass('fixed-top')
+            header.removeClass('fixed-bg')
         }
     })
 
