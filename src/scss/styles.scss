@@ -1,192 +1,83 @@
+@use "_colors";
+@use "@fortawesome/fontawesome-free/scss/_variables" as fav with (
+  // customizing $font-path - make sure it points to where your webfonts are stored in your project
+  $font-path: "../../node_modules/@fortawesome/fontawesome-free/webfonts"
+);
+@use "@fortawesome/fontawesome-free/scss/fontawesome";
+@use "@fortawesome/fontawesome-free/scss/solid";
+@use "@fortawesome/fontawesome-free/scss/regular";
+@use "@fortawesome/fontawesome-free/scss/brands";
 @import "_variables";
-@import "_colors";
-@import "bootstrap/scss/bootstrap";
-@import "@fortawesome/fontawesome-free/scss/fontawesome";
-@import "@fortawesome/fontawesome-free/scss/regular";
-@import "@fortawesome/fontawesome-free/scss/solid";
-@import "@fortawesome/fontawesome-free/scss/brands";
 @import "../../node_modules/lightbox2/dist/css/lightbox.min.css";
-@import "_overrides";
 
-/* Header */
-
-/* Content */
-img.circle {
-  display: block;
-  margin: 0 auto;
-  border-radius: 200%;
-  width: 70%;
+html {
+  scroll-behavior: smooth;
 }
 
-#aboutme > div > .row,
-#aboutme > div > .row > div:first-child,
-#skills > div > .row,
-#portfolio > div > .row,
-#career {
-  min-height: calc(100vh - 55.97px);
+:target {
+  scroll-margin-top: 72px;
 }
 
-.fixed-top + #aboutme {
-  padding-top: 55.97px;
+#navDrawer {
+  transform: translateY(-100%);
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
 }
 
-#aboutme {
-  margin-top: 0;
-  background: $domsey-primary;
-  p {
-    margin-bottom: 0;
-  }
-  hr {
-    background-color: white;
-  }
-  > div > .row,
-  > div > .row > div:first-child {
-    min-height: calc(100vh - 56px);
-  }
-  > div > .row > div:first-child {
-    display: flex;
-  }
-  ul.list-inline a {
-    color: white;
-  }
-}
-#career {
-  background: #efefef;
-  display: flex;
-  > div > div > div {
-    position: relative;
-  }
+/* Simplified Mobile Menu State Logic */
+body:has(#drawer-toggle:checked) #navDrawer {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
 }
 
-#skills {
-  background: $domsey-dark;
+body:has(#drawer-toggle:checked) {
+  overflow: hidden;
 }
 
-.domsey-timeline {
-  list-style: none;
-  margin-bottom: 0;
-  > li > .year {
-    display: block;
-    position: absolute;
-    left: 0.5em;
-    width: 50px;
-    line-height: 50px;
-    border-radius: 50%;
-    background: #1a237e;
-    color: white;
-    text-align: center;
-  }
-  > li > .card {
-    margin-left: 2em;
-    margin-bottom: 1em;
-    box-shadow: unset;
-    .card-header {
-      border: none;
-      background: $domsey-primary;
-      color: white;
-      &::after {
-        content: "";
-        position: absolute;
-        top: 10px;
-        right: 100%;
-        width: 0;
-        border-right: 10px solid #1a237e;
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-      }
-    }
-  }
-  > li:last-child > .card {
-    margin-bottom: 0;
-  }
+/* Burger to X Animation */
+.burger-line {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+body:has(#drawer-toggle:checked) .line-1 {
+  transform: translateY(6px) rotate(45deg);
+}
+body:has(#drawer-toggle:checked) .line-2 {
+  opacity: 0;
+  transform: scaleX(0);
+}
+body:has(#drawer-toggle:checked) .line-3 {
+  transform: translateY(-6px) rotate(-45deg);
 }
 
-.domsey-skills {
-  .card {
-    padding-left: 15px;
-    padding-right: 15px;
-    > .row > div:first-child > h3 {
-      margin-top: 1rem;
-    }
+/* Smooth stagger for links */
+body:has(#drawer-toggle:checked) .nav-item {
+  animation: slideFadeIn 0.4s forwards cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+}
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-
-.domsey-portfolio {
-  img {
-    width: 100%;
-  }
-  > .row > div {
-    position: relative;
-  }
-  > .row > div:not(:last-child) {
-    margin-bottom: 1em;
-  }
-  > .row > div:not(:last-child) > div {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: calc(100% - 24px);
-    padding: 1em;
-    background: rgba(0, 0, 0, 0.24);
-    > p {
-      margin-bottom: 0;
-    }
-  }
-  > .row > div:last-child > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid $domsey-primary;
-    aspect-ratio: 1 / 1;
-    height: 100%;
-  }
+.nav-item:nth-child(1) {
+  animation-delay: 0.1s;
 }
-
-#portfolio {
-  background: #efefef;
+.nav-item:nth-child(2) {
+  animation-delay: 0.15s;
 }
-
-#imprint iframe {
-  width: 100%;
-  height: 50em;
+.nav-item:nth-child(3) {
+  animation-delay: 0.2s;
 }
-
-/* Footer */
-/* Media Queries */
-@media (min-width: 768px) {
-  img.circle {
-    width: 90%;
-  }
-  #aboutme,
-  nav.navbar {
-    background: linear-gradient(
-      to right,
-      $domsey-primary 50%,
-      #efefef 50%
-    ) !important;
-  }
-  nav.navbar.fixed-top {
-    box-shadow:
-      0 1px 3px rgba(0, 0, 0, 0.12),
-      0 1px 2px rgba(0, 0, 0, 0.24);
-    background: $domsey-primary !important;
-    color: white;
-  }
-  .domsey-portfolio > .row > div:not(:last-child) {
-    margin-bottom: unset;
-  }
-  .domsey-portfolio > .row {
-    > div:not(:last-child) > div {
-      display: none;
-    }
-    > div:last-child:hover > div {
-      display: flex;
-    }
-    > div:hover > div {
-      display: block;
-    }
-  }
-  .domsey-skills .card > .row > div > h3 {
-    margin-top: 15px;
-  }
+.nav-item:nth-child(4) {
+  animation-delay: 0.25s;
 }

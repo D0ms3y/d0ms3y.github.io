@@ -1,0 +1,71 @@
+<div class="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
+  <div class="absolute inset-0 bg-[#000000]/80 backdrop-blur-md"></div>
+  <div
+    class="relative bg-surface w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-3xl border border-outline-variant/30 shadow-2xl"
+  >
+    <!-- Close Button -->
+    <button
+      class="absolute top-6 right-6 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-high border border-outline-variant/30 text-on-background hover:bg-surface-bright transition-colors"
+    >
+      <span class="material-symbols-outlined" data-icon="close">close</span>
+    </button>
+    <div class="grid md:grid-cols-2">
+      <div class="p-8 md:p-12 space-y-8">
+        <div class="space-y-4">
+          <div class="flex flex-wrap gap-2">
+            <% project.tags.forEach(function(tag) { %>
+                <span
+                    class="px-3 py-1 bg-primary/10 text-primary-fixed text-xs rounded-md font-mono"
+                ><%= tag %></span
+              >
+              <% }); %>
+          </div>
+          <h2
+            class="font-headline text-3xl md:text-4xl font-extrabold tracking-tight"
+          >
+            <%= project.title %>
+          </h2>
+        </div>
+        <div class="prose prose-invert max-w-none">
+          <p class="text-on-surface-variant leading-relaxed mt-4"><%= project.description %></p>
+        </div>
+        <div class="flex flex-wrap gap-4 pt-4">
+          <% if (project.url) { %>
+            <a
+            class="flex items-center gap-2 px-6 py-3 bg-primary-dim text-on-primary rounded-full font-bold hover:opacity-90 transition-all"
+            href="<%= project.url %>"
+          >
+            <span
+              class="material-symbols-outlined text-[20px]"
+              data-icon="open_in_new"
+              >open_in_new</span
+            >
+            Live Demo
+          </a>
+          <% }; %>
+          <% if (project.githubUrl) { %>
+          <a
+            class="flex items-center gap-2 px-6 py-3 border border-outline-variant/30 text-on-background rounded-full font-bold hover:bg-surface-bright transition-colors"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-[20px]" data-icon="code"
+              >code</span
+            >
+            GitHub
+          </a>
+          <% }; %>
+        </div>
+      </div>
+      <div class="bg-surface-container-high min-h-[300px] relative">
+        <img
+          alt="<%= project.title %>"
+          class="w-full h-full object-cover"
+          src="<%= project.coverImage %>"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-surface via-transparent to-transparent md:block hidden"
+        ></div>
+      </div>
+    </div>
+  </div>
+</div>

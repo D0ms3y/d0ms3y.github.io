@@ -1,36 +1,183 @@
 {
-	"locals": {
-		"languages": [
-			{ "name": "HTML", "icon": "fa-brands fa-html5", "skillLevel": "100" },
-			{ "name": "CSS", "icon": "fa-brands fa-css3", "skillLevel": "100" },
-			{ "name": "Javascript", "icon": "fa-brands fa-js", "skillLevel": "100" },
-			{ "name": "Typescript", "icon": "fa fa-code", "skillLevel": "75" },
-			{ "name": "PHP", "icon": "fa-brands fa-php", "skillLevel": "25" },
-			{ "name": "Java", "icon": "fa-brands fa-java", "skillLevel": "50" },
-			{ "name": "Bash", "icon": "fa fa-terminal", "skillLevel": "50" },
-			{ "name": "Dart", "icon": "fa fa-code", "skillLevel": "25" },
-			{ "name": "MySQL", "icon": "fa fa-database", "skillLevel": "100" },
-			{ "name": "Microsoft SQL", "icon": "fa fa-database", "skillLevel": "75" },
-			{ "name": "Oracle SQL", "icon": "fa fa-database", "skillLevel": "75" },
-			{ "name": "PostgreSQL", "icon": "fa fa-database", "skillLevel": "75" }
-		],
-		"frameworks": [
-			{ "name": "Angular", "icon": "fa-brands fa-angular", "skillLevel": "75" },
-			{ "name": "Bootstrap", "icon": "fa-brands fa-bootstrap", "skillLevel": "100" },
-			{ "name": "Express", "icon": "fa-brands fa-node-js", "skillLevel": "100" },
-			{ "name": "typeORM", "icon": "fa fa-database", "skillLevel": "75" },
-			{ "name": "Symfony", "icon": "fa-brands fa-symfony", "skillLevel": "50" },
-			{ "name": "jQuery", "icon": "fa-brands fa-js", "skillLevel": "100" },
-			{ "name": "Flutter", "icon": "fa fa-code", "skillLevel": "25" }
-		],
-		"tools": [
-			{ "name": "Git", "icon": "fa-brands fa-git-alt", "skillLevel": "100" },
-			{ "name": "Maven", "icon": "fa-brands fa-java", "skillLevel": "50" },
-			{ "name": "Jira", "icon": "fa-brands fa-jira", "skillLevel": "75" },
-			{ "name": "Confluence", "icon": "fa-brands fa-confluence", "skillLevel": "75" },
-			{ "name": "Jenkins", "icon": "fa-brands fa-jenkins", "skillLevel": "75" },
-			{ "name": "YouTrack", "icon": "fa fa-list-check", "skillLevel": "25" }
-		]
-	},
-	"views": ["src/views"]
+  "locals": {
+    "careerSteps": [
+      {
+        "from": "2023",
+        "to": "Present",
+        "icon": "rocket_launch",
+        "title": "Co-Founder & Software Engineer @ DB-RM Solutions",
+        "description": "I specialize in the technical execution of custom web applications and professional web design. My focus is on engineering high-performance, modern digital solutions that combine intuitive user interfaces with a clean, scalable technical foundation."
+      },
+      {
+        "from": "2022",
+        "to": "Present",
+        "icon": "code",
+        "title": "Consultant & Full-Stack Developer @ bridgingIT",
+        "description": "Promoted to Consultant following an internal coaching program. I specialize in Java and Node.js backend development while delivering end-to-end full-stack solutions, leveraging Bash and Azure Pipelines for cloud-based automation."
+      },
+      {
+        "from": "2020",
+        "to": "2022",
+        "icon": "code",
+        "title": "Associate Consultant & Full-Stack Developer @ bridgingIT",
+        "description": "Developed enterprise-grade solutions using Java, Express, and Node.js. I focused on building robust full-stack architectures and managing CI/CD workflows through Azure Pipelines."
+      }
+    ],
+    "languages": [
+      {
+        "name": "HTML",
+        "icon": "fa-brands fa-html5",
+        "skillLevel": "100"
+      },
+      {
+        "name": "CSS",
+        "icon": "fa-brands fa-css3",
+        "skillLevel": "100"
+      },
+      {
+        "name": "Javascript",
+        "icon": "fa-brands fa-js",
+        "skillLevel": "100"
+      },
+      {
+        "name": "Typescript",
+        "icon": "fa fa-code",
+        "skillLevel": "75"
+      },
+      {
+        "name": "PHP",
+        "icon": "fa-brands fa-php",
+        "skillLevel": "25"
+      },
+      {
+        "name": "Java",
+        "icon": "fa-brands fa-java",
+        "skillLevel": "50"
+      },
+      {
+        "name": "Bash",
+        "icon": "fa fa-terminal",
+        "skillLevel": "50"
+      },
+      {
+        "name": "Dart",
+        "icon": "fa fa-code",
+        "skillLevel": "25"
+      },
+      {
+        "name": "MySQL",
+        "icon": "fa fa-database",
+        "skillLevel": "100"
+      },
+      {
+        "name": "Microsoft SQL",
+        "icon": "fa fa-database",
+        "skillLevel": "75"
+      },
+      {
+        "name": "Oracle SQL",
+        "icon": "fa fa-database",
+        "skillLevel": "75"
+      },
+      {
+        "name": "PostgreSQL",
+        "icon": "fa fa-database",
+        "skillLevel": "75"
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "Angular",
+        "icon": "fa-brands fa-angular",
+        "skillLevel": "75"
+      },
+      {
+        "name": "Bootstrap",
+        "icon": "fa-brands fa-bootstrap",
+        "skillLevel": "100"
+      },
+      {
+        "name": "Express",
+        "icon": "fa-brands fa-node-js",
+        "skillLevel": "100"
+      },
+      {
+        "name": "typeORM",
+        "icon": "fa fa-database",
+        "skillLevel": "75"
+      },
+      {
+        "name": "Symfony",
+        "icon": "fa-brands fa-symfony",
+        "skillLevel": "50"
+      },
+      {
+        "name": "jQuery",
+        "icon": "fa-brands fa-js",
+        "skillLevel": "100"
+      },
+      {
+        "name": "Flutter",
+        "icon": "fa fa-code",
+        "skillLevel": "25"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Git",
+        "icon": "fa-brands fa-git-alt",
+        "skillLevel": "100"
+      },
+      {
+        "name": "Maven",
+        "icon": "fa-brands fa-java",
+        "skillLevel": "50"
+      },
+      {
+        "name": "Jira",
+        "icon": "fa-brands fa-jira",
+        "skillLevel": "75"
+      },
+      {
+        "name": "Confluence",
+        "icon": "fa-brands fa-confluence",
+        "skillLevel": "75"
+      },
+      {
+        "name": "Jenkins",
+        "icon": "fa-brands fa-jenkins",
+        "skillLevel": "75"
+      },
+      {
+        "name": "YouTrack",
+        "icon": "fa fa-list-check",
+        "skillLevel": "25"
+      }
+    ],
+    "projectReferences": [
+      {
+        "id": "dbrm",
+        "type": "large",
+        "tags": ["Wordpress", "PHP", "MySQL"],
+        "coverImage": "../img/db-rm/db-rm-landing-page.png",
+        "title": "DB-RM Solutions Corporate Website",
+        "description": "I built the official website for DB-RM Solutions GbR, our Schönefeld-based company, to give us a professional yet approachable online presence. Using WordPress and a flexible theme builder, I focused on creating a clean, responsive layout that works perfectly on both desktop and mobile. I customized the design to feature a modern dark look as the default, ensuring the site feels current while staying easy for our clients to navigate. It was a great way to handle the full setup of a business site and build a solid foundation for our brand.",
+        "url": "https://db-rm.dev",
+        "githubUrl": ""
+      },
+      {
+        "id": "galleryApp",
+        "type": "small",
+        "tags": ["TypeScript", "Express", "TypeORM", "Angular", "Bootstrap", "Jenkins"],
+        "coverImage": "../img/gallery-app/gallery-app-login.png",
+        "title": "Gallery App",
+        "description": "I developed this private gallery application as a personal project for my girlfriend and me to provide a secure and customized space for our shared memories. My goal was to create a self-hosted alternative to mainstream cloud services that allows us to easily upload images and organize them into tailored albums. On the technical side, I built the entire system from the ground up, engineering a custom backend to handle the core logic and data management. To ensure a smooth development experience, I also implemented a full CI/CD pipeline, which automates the deployment process and allows me to roll out new features quickly. While the gallery remains private for data security reasons, the following screenshots offer a glimpse into the interface and the functionality I’ve implemented.",
+        "url": "",
+        "githubUrl": ""
+      }
+    ]
+  },
+  "views": [
+    "src/views"
+  ]
 }

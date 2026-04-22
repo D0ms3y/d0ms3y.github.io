@@ -1,45 +1,203 @@
-<div class="modal fade" id="imprint" tabindex="1">
-	<div class="modal-dialog modal-dialog-scrollable">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5>Imprint</h5>
-				<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-					aria-label="Close"></button>
-			</div>
-			<div class="modal-body">
-				<h1>Imprint / Impressum</h1>
-
-				<h2>Information as required by § 5 TMG / Angaben gemäß § 5 TMG</h2>
-				<p>Dominik Borowski<br />
-					Antaresstraße 3<br />
-					12529 Schönefeld</p>
-
-				<h2>Contact / Kontakt</h2>
-				<p>E-Mail: domsey@db-rm.dev</p>
-
-				<h2>Data Protection Policy (GDPR)</h2>
-				<p>The website does not collect, store or process Personally Identifiable Information (PII). This
-					website does not require the use of cookies.</p>
-
-				<h2>Datenschutzerklärung (DSGVO)</h2>
-				<p>Auf dieser Website werden keine personenbezogenen Daten erhoben, gespeichert oder verarbeitet. Es
-					werden keine Cookies verwendet.</p>
-
-				<h2>Third Party Inclusion</h2>
-				<p>This website is hosted by <a href="https://www.github.com">Github</a> using <a
-						href="https://help.github.com/articles/what-is-github-pages/">Github Pages</a>. The Github
-					Global Privacy Practices are available <a
-						href="https://help.github.com/articles/global-privacy-practices/">here</a></p>
-
-				<h2>Verweis auf Dritte</h2>
-				<p>Diese Website wird auf <a href="https://www.github.com">Github</a> als <a
-						href="https://help.github.com/articles/what-is-github-pages/">Github Pages</a> gehostet. Die
-					Github Global Privacy Practices sind <a
-						href="https://help.github.com/articles/global-privacy-practices/">hier</a> hinterlegt.</p>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-			</div>
-		</div>
-	</div>
+<div
+  id="imprint"
+  class="fixed inset-0 z-[110] bg-slate-900/40 dark:bg-black/80 backdrop-blur-md flex items-center justify-center p-4 md:p-8 hidden"
+>
+  <!-- Impressum Modal Container -->
+  <div
+    class="relative w-full max-w-2xl bg-white dark:bg-[#0c0e17] rounded-xl shadow-2xl border border-slate-200 dark:border-white/10 flex flex-col max-h-[85vh] overflow-hidden"
+  >
+    <!-- Modal Header -->
+    <div
+      class="flex items-center justify-between px-8 py-6 border-b border-slate-100 dark:border-white/5"
+    >
+      <h2
+        class="font-headline text-xl font-bold text-[#3D5AFE] dark:text-[#9ba8ff] tracking-tight"
+      >
+        Impressum
+      </h2>
+      <button
+        class="text-slate-400 hover:text-slate-600 dark:text-gray-500 dark:hover:text-gray-300 transition-colors"
+      >
+        <span
+          class="modal-close-btn material-symbols-outlined"
+          data-project-id="imprint"
+          >close</span
+        >
+      </button>
+    </div>
+    <!-- Modal Scrollable Content -->
+    <div class="overflow-y-auto px-8 py-10 space-y-12">
+      <!-- Contact Section -->
+      <section class="space-y-4">
+        <div class="flex items-center gap-3">
+          <span
+            class="material-symbols-outlined text-primary-fixed"
+            data-icon="contact_page"
+            >contact_page</span
+          >
+          <h3
+            class="font-headline text-lg font-semibold text-slate-900 dark:text-gray-100 uppercase tracking-wider text-[0.85rem]"
+          >
+            Contact Information
+          </h3>
+        </div>
+        <div
+          class="font-body text-slate-600 dark:text-gray-400 leading-relaxed space-y-1"
+        >
+          <p class="text-slate-900 dark:text-gray-200 font-medium">
+            Dominik Borowski
+          </p>
+          <p>Antaresstraße 3</p>
+          <p>12529 Schönefeld</p>
+        </div>
+        <div class="pt-2 font-body text-slate-600 dark:text-gray-400">
+          <p>
+            <span
+              class="text-[#3D5AFE]/70 dark:text-[#9ba8ff]/60 font-medium mr-2"
+              >Email:</span
+            >
+            dominik@db-rm.dev
+          </p>
+          <!-- <p>
+            <span class="text-primary/60 font-medium mr-2">Phone:</span> +49 (0)
+            30 1234 5678
+          </p> -->
+        </div>
+      </section>
+      <!-- Disclaimer / Liability -->
+      <section class="space-y-4">
+        <div class="flex items-center gap-3">
+          <span
+            class="material-symbols-outlined text-primary-fixed"
+            data-icon="gavel"
+            >gavel</span
+          >
+          <h2
+            class="font-headline text-lg font-semibold text-slate-900 dark:text-gray-100 uppercase tracking-wider text-[0.85rem]"
+          >
+            Data Protection Policy (GDPR) / Datenschutzerklärung (DSGVO)
+          </h2>
+        </div>
+        <div
+          class="font-body text-sm text-slate-600 dark:text-gray-400 leading-relaxed space-y-4"
+        >
+          <p>
+            The website does not collect, store or process Personally
+            Identifiable Information (PII). This website does not require the
+            use of cookies.
+          </p>
+          <p>
+            Auf dieser Website werden keine personenbezogenen Daten erhoben,
+            gespeichert oder verarbeitet. Es werden keine Cookies verwendet.
+          </p>
+        </div>
+      </section>
+      <!-- Third Party Inclusion -->
+      <section class="space-y-4">
+        <div class="flex items-center gap-3">
+          <span
+            class="material-symbols-outlined text-primary-fixed"
+            data-icon="gavel"
+            >gavel</span
+          >
+          <h2
+            class="font-headline text-lg font-semibold text-slate-900 dark:text-gray-100 uppercase tracking-wider text-[0.85rem]"
+          >
+            Third Party Inclusion / Verweis auf Dritte
+          </h2>
+        </div>
+        <div
+          class="font-body text-sm text-slate-600 dark:text-gray-400 leading-relaxed space-y-4"
+        >
+          <p>
+            This website is hosted by
+            <a href="https://www.github.com" target="_blank">Github</a> using
+            <a
+              class="text-primary dark:text-on-surface-variant hover:text-brand-primary"
+              href="https://help.github.com/articles/what-is-github-pages/"
+              target="_blank"
+              >Github Pages</a
+            >. The Github Global Privacy Practices are available
+            <a
+              class="text-primary dark:text-on-surface-variant hover:text-brand-primary"
+              href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+              target="_blank"
+              >here</a
+            >
+          </p>
+          <p>
+            Diese Website wird auf
+            <a
+              class="text-primary dark:text-on-surface-variant hover:text-brand-primary"
+              href="https://www.github.com"
+              target="_blank"
+              >Github</a
+            >
+            als
+            <a
+              class="text-primary dark:text-on-surface-variant hover:text-brand-primary"
+              href="https://help.github.com/articles/what-is-github-pages/"
+              target="_blank"
+              >Github Pages</a
+            >
+            gehostet. Die Github Global Privacy Practices sind
+            <a
+              href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement"
+              target="_blank"
+              >hier</a
+            >
+            hinterlegt.
+          </p>
+        </div>
+      </section>
+      <!-- Dispute Resolution -->
+      <section class="p-6 bg-surface-bright rounded-lg space-y-3">
+        <div class="flex items-center gap-3">
+          <span
+            class="material-symbols-outlined text-tertiary"
+            data-icon="balance"
+            >balance</span
+          >
+          <h3
+            class="font-headline text-on-surface font-semibold text-[0.85rem] uppercase tracking-wider"
+          >
+            Dispute Resolution / Streitbeteiligung
+          </h3>
+        </div>
+        <p class="font-body text-xs text-on-surface-variant leading-relaxed">
+          The European Commission provides a platform for online dispute
+          resolution (OS):
+          <a
+            class="text-primary hover:underline transition-all"
+            target="_blank"
+            href="https://ec.europa.eu/consumers/odr"
+            >https://ec.europa.eu/consumers/odr</a
+          >. We are not willing or obliged to participate in dispute resolution
+          proceedings before a consumer arbitration board.
+        </p>
+        <p class="font-body text-xs text-on-surface-variant leading-relaxed">
+          Die Europäische Kommission stellt eine Plattform zur
+          Online-Streitbeilegung (OS) bereit:
+          <a
+            class="text-primary hover:underline transition-all"
+            target="_blank"
+            href="https://ec.europa.eu/consumers/odr"
+            >https://ec.europa.eu/consumers/odr</a
+          >. Wir sind nicht bereit oder verpflichtet, an
+          Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
+          teilzunehmen.
+        </p>
+      </section>
+    </div>
+    <!-- Modal Footer -->
+    <div class="px-8 py-6 bg-slate-50 dark:bg-white/5 flex justify-center">
+      <button
+        id="btnCloseImprint"
+        class="px-6 py-2 bg-[#3D5AFE] text-white dark:bg-[#4963ff] dark:text-on-primary font-headline font-semibold rounded-full hover:bg-[#2949ef] dark:hover:bg-[#9ba8ff] transition-all text-sm"
+        data-project-id="imprint"
+      >
+        Acknowledge
+      </button>
+    </div>
+  </div>
 </div>

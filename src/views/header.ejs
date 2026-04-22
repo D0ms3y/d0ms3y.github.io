@@ -1,24 +1,146 @@
-<nav id="domsey-nav" class="navbar navbar-expand-md navbar-dark bg-dark">
-	<div class="container-fluid">
-		<a href="#aboutme" class="navbar-brand">Dominik | ドミニク</a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse justify-content-end" id="navbar">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a href="#aboutme" class="nav-link">About me</a>
-				</li>
-				<li class="nav-item d-md-none">
-					<a href="#career" class="nav-link">Career</a>
-				</li>
-				<li class="nav-item">
-					<a href="#skills" class="nav-link">Skills</a>
-				</li>
-				<li class="nav-item">
-					<a href="#portfolio" class="nav-link">Portfolio</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+<nav
+  class="fixed top-0 w-full z-50 bg-white/70 dark:bg-background/70 backdrop-blur-md border-b border-slate-200 dark:border-outline-variant/10 z-[110]"
+>
+  <div
+    class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto font-['Manrope'] tracking-tight"
+  >
+    <div class="flex lg:hidden">
+      <input class="hidden" id="drawer-toggle" type="checkbox" />
+      <label
+        class="flex flex-col justify-center items-center w-10 h-10 cursor-pointer hover:bg-white/5 transition-colors rounded-full z-[100]"
+        for="drawer-toggle"
+        id="menu-trigger"
+      >
+        <span class="burger-line line-1 w-6 h-0.5 bg-primary-fixed mb-1"></span>
+        <span class="burger-line line-2 w-6 h-0.5 bg-primary-fixed mb-1"></span>
+        <span class="burger-line line-3 w-6 h-0.5 bg-primary-fixed"></span>
+      </label>
+    </div>
+    <div class="flex items-center gap-2">
+      <div class="text-xl font-bold tracking-tighter">Dominik Borowski</div>
+      <span class="text-lg font-japanese opacity-50 ml-1">ドミニク</span>
+    </div>
+    <div class="hidden lg:flex items-center gap-8">
+      <a
+        class="text-slate-600 dark:text-on-background/70 font-semibold border-b-2 border-brand-primary dark:border-primary pb-1 transition-all duration-300 ease-in-out"
+        href="#about"
+        >About</a
+      >
+      <a
+        class="text-slate-600 dark:text-on-background/70 hover:text-light-text dark:hover:text-on-background transition-all duration-300 ease-in-out"
+        href="#career"
+        >Career</a
+      >
+      <a
+        class="text-slate-600 dark:text-on-background/70 hover:text-light-text dark:hover:text-on-background transition-all duration-300 ease-in-out"
+        href="#skills"
+        >Skills</a
+      >
+      <a
+        class="text-slate-600 dark:text-on-background/70 hover:text-light-text dark:hover:text-on-background transition-all duration-300 ease-in-out"
+        href="#portfolio"
+        >Portfolio</a
+      >
+      <a
+        class="text-slate-600 dark:text-on-background/70 hover:text-light-text dark:hover:text-on-background transition-all duration-300 ease-in-out"
+        href="#contact"
+        >Contact</a
+      >
+    </div>
+    <div class="flex items-center gap-4">
+      <button
+        aria-label="Toggle dark mode"
+        class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-surface-container-high transition-colors flex items-center justify-center border border-slate-200 dark:border-outline-variant/20"
+        id="themeToggleBtn"
+      >
+        <span
+          class="material-symbols-outlined !block dark:!hidden"
+          data-icon="dark_mode"
+          >dark_mode</span
+        >
+        <span
+          class="material-symbols-outlined !hidden dark:!block"
+          data-icon="light_mode"
+          >light_mode</span
+        >
+      </button>
+      <button
+        class="bg-brand-primary dark:bg-primary-dim text-white dark:text-on-primary px-6 py-2 rounded-full font-semibold hover:opacity-90 transition-all shadow-lg shadow-brand-primary/20 dark:shadow-primary-dim/20 hidden lg:block"
+      >
+        Resume
+      </button>
+    </div>
+  </div>
 </nav>
+<div
+  class="fixed inset-0 z-[90] flex flex-col items-center justify-center bg-white dark:bg-surface-container-high px-8"
+  id="navDrawer"
+>
+  <div class="flex flex-col gap-4 w-full max-w-sm" id="mobile-nav-links">
+    <a
+      class="nav-item group flex flex-col items-center justify-center py-4 transition-all duration-300"
+      href="#about"
+    >
+      <span
+        class="font-headline text-3xl font-bold text-slate-600 dark:text-on-background/70 group-hover:text-primary transition-colors"
+        >About</span
+      >
+      <span
+        class="text-xs font-label uppercase tracking-[0.2em] text-slate-600 dark:text-on-background/70 mt-1 font-light group-hover:text-primary/60 transition-colors"
+        >厳選された作品</span
+      >
+    </a>
+    <a
+      class="nav-item group flex flex-col items-center justify-center py-4 transition-all duration-300"
+      href="#career"
+    >
+      <span
+        class="font-headline text-3xl font-bold text-slate-600 dark:text-on-background/70 group-hover:text-primary transition-colors"
+        >Career</span
+      >
+      <span
+        class="text-xs font-label uppercase tracking-[0.2em] text-slate-600 dark:text-on-background/70 mt-1 font-light group-hover:text-primary/60 transition-colors"
+        >制作プロセス</span
+      >
+    </a>
+    <a
+      class="nav-item group flex flex-col items-center justify-center py-4 transition-all duration-300"
+      href="#skills"
+    >
+      <span
+        class="font-headline text-3xl font-bold text-slate-600 dark:text-on-background/70 group-hover:text-primary transition-colors"
+        >Skills</span
+      >
+      <span
+        class="text-xs font-label uppercase tracking-[0.2em] text-slate-600 dark:text-on-background/70 mt-1 font-light group-hover:text-primary/60 transition-colors"
+        >技術スタック</span
+      >
+    </a>
+    <a
+      class="nav-item group flex flex-col items-center justify-center py-4 transition-all duration-300"
+      href="#portfolio"
+    >
+      <span
+        class="font-headline text-3xl font-bold text-slate-600 dark:text-on-background/70 group-hover:text-primary transition-colors"
+        >Portfolio</span
+      >
+      <span
+        class="text-xs font-label uppercase tracking-[0.2em] text-slate-600 dark:text-on-background/70 mt-1 font-light group-hover:text-primary/60 transition-colors"
+        >お問い合わせ</span
+      >
+    </a>
+    <a
+      class="nav-item group flex flex-col items-center justify-center py-4 transition-all duration-300"
+      href="#contact"
+    >
+      <span
+        class="font-headline text-3xl font-bold text-slate-600 dark:text-on-background/70 group-hover:text-primary transition-colors"
+        >Contact</span
+      >
+      <span
+        class="text-xs font-label uppercase tracking-[0.2em] text-slate-600 dark:text-on-background/70 mt-1 font-light group-hover:text-primary/60 transition-colors"
+        >お問い合わせ</span
+      >
+    </a>
+  </div>
+</div>

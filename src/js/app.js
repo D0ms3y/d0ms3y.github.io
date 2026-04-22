@@ -1,52 +1,99 @@
-import * as $ from '../../node_modules/jquery/dist/jquery';
-import '../../node_modules/@popperjs/core/dist/cjs/popper';
-import '../../node_modules/lightbox2/dist/js/lightbox';
-import '../../node_modules/bootstrap/dist/js/bootstrap';
+// Scrollspy functionality (IntersectionObserver)
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.getAttribute("id");
+      const navLink = document.querySelector(`[href="#${id}"]`);
 
-$(() => {
-    // Navigation
-    $("a.navbar-brand, li.nav-item").on("click", (e) => {
-        const target = e.currentTarget;
-        const header = $('nav.navbar');
-        let href = $("a", target).attr('href');
-        if (href == null) { 
-            href = $(target).attr('href') 
-        }
-        href = href.substring(1, href.length);
-        const element = document.getElementById(href);
-        const y = element.getBoundingClientRect().top + window.pageYOffset + -header.outerHeight();
-        window.scrollTo({ top: y, behavior: 'smooth' });
-        e.preventDefault();
-    })
+      if (!navLink) return; // Falls kein passender Link existiert, abbrechen
 
-    // fix header to top when scrolling
-    const header = $("nav.navbar");
-    if($(document).scrollTop() >= (header.height() / 2)) {
-        header.addClass('fixed-top');
-    } else {
-        header.removeClass('fixed-top')
+      if (entry.isIntersecting) {
+        // Use Tailwind classes to highlight the active link
+        navLink.classList.add(
+          "dark:text-primary",
+          "font-semibold",
+          "border-b-2",
+          "dark:border-primary",
+          "border-brand-primary",
+          "pb-1",
+        );
+      } else {
+        navLink.classList.remove(
+          "dark:text-primary",
+          "font-semibold",
+          "border-b-2",
+          "dark:border-primary",
+          "border-brand-primary",
+          "pb-1",
+        );
+      }
+    });
+  },
+  { threshold: 0.5 },
+);
+
+document
+  .querySelectorAll("section")
+  .forEach((section) => observer.observe(section));
+
+// Modal functionality
+function openModal(id) {
+  document.getElementById(id).classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal(id) {
+  document.getElementById(id).classList.add("hidden");
+  document.body.style.overflow = "auto";
+}
+
+document.querySelectorAll(".btn-read-more, #btnImprint").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    openModal(event.target.dataset.projectId);
+  });
+});
+
+document
+  .querySelectorAll(".modal-close-btn, #btnCloseImprint")
+  .forEach((button) => {
+    button.addEventListener("click", (event) => {
+      closeModal(event.target.dataset.projectId);
+    });
+  });
+
+// Light/Dark mode
+const themeToggleBtn = document.getElementById("themeToggleBtn");
+const htmlElement = document.documentElement;
+
+// Check for saved theme preference or default to dark
+themeToggleBtn.addEventListener("click", () => {
+  if (htmlElement.classList.contains("dark")) {
+    htmlElement.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+  } else {
+    htmlElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  }
+});
+
+// Mobile Navigation
+const toggle = document.getElementById("drawer-toggle");
+const menuLinks = document.querySelectorAll("#mobile-nav-links a");
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    // Prevent immediate navigation to show closing animation
+    const targetHref = link.getAttribute("href");
+    if (targetHref && targetHref !== "#") {
+      e.preventDefault();
+
+      // Uncheck toggle to trigger closing animation
+      toggle.checked = false;
+
+      // Navigate after animation completes (approx 400ms based on CSS transition)
+      setTimeout(() => {
+        window.location.href = targetHref;
+      }, 100);
     }
-
-    $(document).on('scroll', (e) => {
-        const header = $("nav.navbar");
-        if($(e.currentTarget).scrollTop() >= (header.height() / 2)) {
-            header.addClass('fixed-top');
-        } else {
-            header.removeClass('fixed-top')
-        }
-    })
-
-    // Workaround to fix navigation for tablets/desktops
-    if (window.innerWidth >= 768 && $('a[href="#career"]').hasClass('active')) {
-        $('a[href="#aboutme"]').addClass('active')
-        $(`a[href="#career"]`).removeClass('active');
-    }
-    
-    window.addEventListener('activate.bs.scrollspy', (e) => {
-        console.log(e);
-        if (window.innerWidth >= 768 && e.relatedTarget === '#career') {
-            $('a[href="#aboutme"]').addClass('active')
-            $(`a[href="#career"]`).removeClass('active');
-        }
-    })
-})
+  });
+});
