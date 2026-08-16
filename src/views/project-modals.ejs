@@ -1,4 +1,5 @@
 <% locals.projectReferences.forEach(function(project) { %>
+<% if (project.type !== 'github') { %>
 <div id="<%= project.id %>" class="fixed inset-0 z-[110] flex items-center justify-center p-4 md:p-8 hidden ">
   <div class="absolute inset-0 bg-[#000000]/80 backdrop-blur-md"></div>
   <div
@@ -34,6 +35,7 @@
           <% if (project.url) { %>
             <a
             class="flex items-center gap-2 px-6 py-3 bg-brand-primary dark:bg-primary-dim text-white dark:text-on-primary rounded-full font-bold hover:opacity-90 transition-all"
+            target="_blank"
             href="<%= project.url %>"
           >
             <span
@@ -47,7 +49,8 @@
           <% if (project.githubUrl) { %>
           <a
             class="flex items-center gap-2 px-6 py-3 border border-slate-200 dark:border-outline-variant/30 text-slate-900 dark:text-on-background rounded-full font-bold hover:bg-slate-50 dark:hover:bg-surface-bright transition-colors"
-            href="#"
+            target="_blank"
+            href="<%= project.githubUrl %>"
           >
             <span class="material-symbols-outlined text-[20px]" data-icon="code"
               >code</span
@@ -70,4 +73,5 @@
     </div>
   </div>
 </div>
+<% } %>
 <% }); %>

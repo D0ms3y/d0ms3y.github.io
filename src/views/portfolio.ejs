@@ -76,6 +76,28 @@
           </div>
         </div>
       <% } %>
+      <% if (project.type == 'github') { %>
+        <!-- GitHub CTA Card (Subtle Banner) -->
+        <a href="<%= project.url %>" target="_blank" rel="noopener noreferrer"
+          class="md:col-span-4 self-start bg-white dark:bg-surface-container rounded-3xl overflow-hidden group border border-slate-200 dark:border-outline-variant/10 hover:border-brand-primary/30 dark:hover:border-tertiary/30 transition-all shadow-sm flex flex-col md:flex-row items-center justify-between p-8 md:p-10"
+        >
+          <div class="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-6 mb-8 md:mb-0">
+            <div class="w-16 h-16 rounded-2xl bg-slate-100 dark:bg-surface-bright flex items-center justify-center text-slate-600 dark:text-on-surface-variant group-hover:text-brand-primary dark:group-hover:text-primary transition-colors flex-shrink-0 mx-auto md:mx-0">
+              <i class="fa-brands fa-github text-4xl"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-2 text-slate-900 dark:text-on-background font-headline"><%= project.title %></h3>
+              <p class="text-slate-500 dark:text-on-surface-variant text-sm max-w-sm leading-relaxed"><%= project.description %></p>
+            </div>
+          </div>
+          
+          <div class="flex-shrink-0">
+             <div class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-200 dark:border-outline-variant/30 text-slate-700 dark:text-on-surface font-bold group-hover:bg-slate-50 dark:group-hover:bg-surface-bright transition-colors text-sm">
+              Visit Profile <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </div>
+          </div>
+        </a>
+      <% } %>
     <% }); %>
   </div>
 </section>

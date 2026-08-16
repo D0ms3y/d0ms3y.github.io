@@ -156,8 +156,18 @@
     ],
     "projectReferences": [
       {
-        "id": "dbrm",
+        "id": "manageWallpaper",
         "type": "large",
+        "tags": ["Flutter", "Dart", "Android", "Windows", "Linux", "macOS", "iOS"],
+        "coverImage": "../img/manage-wallpaper-cover.png",
+        "title": "manage_wallpaper",
+        "description": "A cross-platform Flutter plugin designed to seamlessly manage device wallpapers. It provides a unified API to easily set static and live background images across mobile and desktop operating systems, simplifying background customization for developers.",
+        "url": "https://pub.dev/packages/manage_wallpaper",
+        "githubUrl": "https://github.com/db-rm-solutions/manage_wallpaper"
+      },
+      {
+        "id": "dbrm",
+        "type": "small",
         "tags": ["Wordpress", "PHP", "MySQL"],
         "coverImage": "../img/db-rm/db-rm-landing-page.png",
         "title": "DB-RM Solutions Corporate Website",
@@ -173,6 +183,16 @@
         "title": "Gallery App",
         "description": "I developed this private gallery application as a personal project for my girlfriend and me to provide a secure and customized space for our shared memories. My goal was to create a self-hosted alternative to mainstream cloud services that allows us to easily upload images and organize them into tailored albums. On the technical side, I built the entire system from the ground up, engineering a custom backend to handle the core logic and data management. To ensure a smooth development experience, I also implemented a full CI/CD pipeline, which automates the deployment process and allows me to roll out new features quickly. While the gallery remains private for data security reasons, the following screenshots offer a glimpse into the interface and the functionality I’ve implemented.",
         "url": "",
+        "githubUrl": ""
+      },
+      {
+        "id": "githubMore",
+        "type": "github",
+        "tags": [],
+        "coverImage": "",
+        "title": "View more on GitHub",
+        "description": "I regularly experiment with new technologies and build open source projects. Check out my GitHub profile to see what else I'm working on.",
+        "url": "https://github.com/D0ms3y?tab=repositories",
         "githubUrl": ""
       }
     ]
