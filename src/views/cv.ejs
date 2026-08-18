@@ -55,7 +55,7 @@
           
           <div class="space-y-4">
             <div>
-              <h3 class="text-[11px] font-bold text-on-surface-variant mb-2 uppercase tracking-wide">Languages</h3>
+              <h3 class="text-[11px] font-bold text-on-surface-variant mb-2 uppercase tracking-wide">Programming</h3>
               <div class="flex flex-wrap gap-1.5">
                 <% locals.languages.forEach(function(language) { %>
                   <span class="px-2 py-1 bg-surface-container rounded border border-outline-variant/15 text-[10px]"><%= language.name %></span>
@@ -95,13 +95,39 @@
             <p><strong>Location:</strong> Germany</p>
           </div>
         </section>
+
+        <!-- Languages -->
+        <section>
+          <h2 class="font-headline text-lg font-bold mb-4 text-primary uppercase tracking-wider flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm">language</span> Languages
+          </h2>
+          <div class="space-y-2 text-xs text-on-surface-variant">
+            <div class="flex justify-between items-center">
+              <strong>German</strong>
+              <span>Native</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <strong>English</strong>
+              <span>Fluent</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <strong>Polish</strong>
+              <span>Intermediate</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <strong>Japanese</strong>
+              <span>Basic</span>
+            </div>
+          </div>
+        </section>
       </aside>
 
-      <!-- Right Column: Career -->
-      <section>
-        <h2 class="font-headline text-lg font-bold mb-6 text-primary uppercase tracking-wider flex items-center gap-2">
-          <span class="material-symbols-outlined text-sm">work</span> Professional Trajectory
-        </h2>
+      <!-- Right Column: Career & Education -->
+      <div class="space-y-8">
+        <section>
+          <h2 class="font-headline text-lg font-bold mb-6 text-primary uppercase tracking-wider flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm">work</span> Professional Experience
+          </h2>
         
         <div class="space-y-5">
           <% locals.careerSteps.forEach(function(step) { %>
@@ -123,6 +149,32 @@
           <% }); %>
         </div>
       </section>
+
+      <!-- Education -->
+      <section class="mt-8">
+        <h2 class="font-headline text-lg font-bold mb-6 text-primary uppercase tracking-wider flex items-center gap-2">
+          <span class="material-symbols-outlined text-sm">school</span> Education
+        </h2>
+        
+        <div class="space-y-5">
+          <div class="relative pl-6 border-l-2 border-surface-container-high pb-2">
+            <div class="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-primary ring-4 ring-background"></div>
+            
+            <div class="flex justify-between items-baseline mb-1">
+              <h3 class="font-headline text-sm font-bold text-on-background">
+                IT-Schule Stuttgart
+              </h3>
+              <span class="text-[9px] text-on-surface-variant font-mono bg-surface-container-high px-2 py-0.5 rounded">
+                2016 — 2019
+              </span>
+            </div>
+            <p class="text-[11px] text-on-surface-variant leading-relaxed">
+              IT Specialist in Application Development (Apprenticeship)
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
       
     </main>
 
