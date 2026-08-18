@@ -114,3 +114,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Generated PDF and Temp Directories
+.tmp-pdf/
+src/docs/cv.pdf

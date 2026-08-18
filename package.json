@@ -3,8 +3,10 @@
   "version": "0.0.1",
   "description": "My personal homepage",
   "scripts": {
-    "start": "rimraf ./dist ./.parcel-cache && parcel src/views/index.ejs",
-    "build": "parcel build src/views/index.ejs --public-url ./"
+    "start": "npm run build:pdf && rimraf ./dist ./.parcel-cache && parcel src/views/index.ejs src/views/cv.ejs",
+    "serve": "npx serve dist",
+    "build": "npm run build:pdf && parcel build src/views/index.ejs src/views/cv.ejs --public-url ./",
+    "build:pdf": "rimraf ./.tmp-pdf && parcel build src/views/cv.ejs --dist-dir .tmp-pdf --public-url ./ && node scripts/generate-pdf.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
     "jquery": "^3.6.0",
     "parcel-transformer-ejs": "^0.2.0",
     "postcss": "^8.5.8",
+    "puppeteer": "^25.7.0",
     "sass": "^1.32.8",
     "tailwindcss": "^4.2.2"
   },
@@ -41,6 +44,7 @@
     ".js?$": "[folder]/[name].[hash].[type]",
     ".scss?$": "css/[name].[hash].[type]",
     ".png?$|.gif?$": "img/[name].[hash].[type]",
+    ".pdf?$": "docs/[name].[type]",
     ".woff2?$|.ttf?$": "fonts/[name].[hash].[type]"
   }
 }

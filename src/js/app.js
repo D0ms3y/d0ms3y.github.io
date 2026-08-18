@@ -92,8 +92,14 @@ menuLinks.forEach((link) => {
 
       // Navigate after animation completes (approx 400ms based on CSS transition)
       setTimeout(() => {
-        window.location.href = targetHref;
+        if (link.getAttribute("target") === "_blank") {
+          window.open(targetHref, "_blank");
+        } else {
+          window.location.href = targetHref;
+        }
       }, 100);
     }
   });
 });
+
+
