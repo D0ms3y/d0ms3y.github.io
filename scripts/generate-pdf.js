@@ -9,8 +9,7 @@ const fs = require('fs');
     // Launch headless browser (using 'shell' which is the stable old headless mode, great for PDFs)
     const browser = await puppeteer.launch({
       headless: 'shell',
-      // For local development on Mac/Windows, we usually don't need extra args.
-      // If it still fails, you can add args: ['--no-sandbox']
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
     
     const page = await browser.newPage();
