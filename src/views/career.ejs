@@ -9,9 +9,9 @@
   </div>
   <div class="space-y-6">
     <!-- Timeline Item 1 -->
-    <% locals.careerSteps.forEach(function(step) { %>
+    <% locals.careerSteps.forEach(function(step, index) { %>
         <div
-      class="grid md:grid-cols-4 gap-8 bg-white dark:bg-surface-container p-8 rounded-xl items-start border border-slate-100 dark:border-outline-variant/5 shadow-sm dark:shadow-none"
+      class="grid md:grid-cols-4 gap-8 bg-white dark:bg-surface-container p-8 rounded-xl items-start border border-slate-100 dark:border-outline-variant/5 shadow-sm dark:shadow-none <%= index >= 3 ? 'hidden extra-career-step' : '' %>"
     >
       <div class="md:col-span-1">
         <span class="text-slate-500 dark:text-on-surface-variant font-mono"
@@ -40,5 +40,12 @@
     </div>
     <% }); %>
   </div>
+  <% if (locals.careerSteps.length > 3) { %>
+    <div class="text-center mt-10">
+      <button id="toggleCareerBtn" class="px-6 py-3 bg-brand-primary text-white dark:bg-primary dark:text-on-primary font-bold rounded-lg hover:opacity-90 transition-opacity">
+        Show More
+      </button>
+    </div>
+  <% } %>
 </section>
 

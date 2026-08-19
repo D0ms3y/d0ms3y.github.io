@@ -102,4 +102,32 @@ menuLinks.forEach((link) => {
   });
 });
 
+// Career Show More / Show Less Toggle
+const toggleCareerBtn = document.getElementById("toggleCareerBtn");
+if (toggleCareerBtn) {
+  toggleCareerBtn.addEventListener("click", () => {
+    const extraSteps = document.querySelectorAll(".extra-career-step");
+    let isHidden = false;
+    
+    extraSteps.forEach(step => {
+      if (step.classList.contains("hidden")) {
+        step.classList.remove("hidden");
+        isHidden = true;
+      } else {
+        step.classList.add("hidden");
+      }
+    });
+
+    if (isHidden) {
+      toggleCareerBtn.innerText = "Show Less";
+    } else {
+      toggleCareerBtn.innerText = "Show More";
+      const careerSection = document.getElementById("career");
+      if (careerSection) {
+        careerSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  });
+}
+
 

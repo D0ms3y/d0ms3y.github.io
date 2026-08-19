@@ -6,21 +6,32 @@
         "to": "Present",
         "icon": "rocket_launch",
         "title": "Co-Founder & Software Engineer @ DB-RM Solutions",
-        "description": "I specialize in the technical execution of custom web applications and professional web design. My focus is on engineering high-performance, modern digital solutions that combine intuitive user interfaces with a clean, scalable technical foundation."
+        "description": "I specialize in the technical execution of custom web applications and professional web design. My focus is on engineering high-performance, modern digital solutions that combine intuitive user interfaces with a clean, scalable technical foundation.",
+        "skills": ["PHP", "WordPress", "Flutter", "Dart", "TypeScript", "TailwindCSS"]
       },
       {
         "from": "2022",
         "to": "Present",
         "icon": "code",
         "title": "Consultant & Full-Stack Developer @ bridgingIT",
-        "description": "As a Consultant, I develop modern full-stack applications and Microservices using Spring Boot and Node.js. I work extensively within containerized environments using Docker and Kubernetes, and I actively support the automation of CI/CD pipelines in Azure and Google Cloud to ensure smooth and reliable deployments."
+        "description": "As a Consultant, I develop modern full-stack applications and Microservices using Spring Boot and Node.js. I work extensively within containerized environments using Docker and Kubernetes, and I actively support the automation of CI/CD pipelines in Azure and Google Cloud to ensure smooth and reliable deployments.",
+        "skills": ["Java", "Spring Boot", "Node.js", "Express", "Docker", "Kubernetes", "Azure", "GCP", "CI/CD"]
       },
       {
         "from": "2020",
         "to": "2022",
         "icon": "code",
         "title": "Associate Consultant & Full-Stack Developer @ bridgingIT",
-        "description": "Contributed to the development of full-stack applications for enterprise clients using Java, Node.js, and Express. I ensured high software quality by implementing automated tests (Jest/JUnit) and actively supported CI/CD deployment workflows within agile teams."
+        "description": "Contributed to the development of full-stack applications for enterprise clients using Java, Node.js, and Express. I ensured high software quality by implementing automated tests (Jest/JUnit) and actively supported CI/CD deployment workflows within agile teams.",
+        "skills": ["Java", "Node.js", "Express", "Jest", "JUnit", "CI/CD", "Agile"]
+      },
+      {
+        "from": "2019",
+        "to": "2020",
+        "icon": "code",
+        "title": "Software Developer @ DATAX-AG",
+        "description": "Developed and maintained software solutions with a focus on reliability and performance. Collaborated closely with cross-functional teams to deliver business-critical applications.",
+        "skills": ["JavaScript", "Microsoft SQL", "Oracle SQL", "PostgreSQL"]
       }
     ],
     "languages": [

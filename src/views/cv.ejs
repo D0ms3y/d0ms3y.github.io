@@ -145,6 +145,13 @@
               <p class="text-[11px] text-on-surface-variant leading-relaxed">
                 <%= step.description %>
               </p>
+              <% if (step.skills && step.skills.length > 0) { %>
+                <div class="mt-2 flex flex-wrap gap-1">
+                  <% step.skills.forEach(function(skill) { %>
+                    <span class="px-1.5 py-0.5 bg-surface-container rounded border border-outline-variant/15 text-[9px] text-on-surface-variant"><%= skill %></span>
+                  <% }); %>
+                </div>
+              <% } %>
             </div>
           <% }); %>
         </div>
